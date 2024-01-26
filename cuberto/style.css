@@ -1,0 +1,36 @@
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
